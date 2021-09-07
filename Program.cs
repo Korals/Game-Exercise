@@ -22,11 +22,9 @@ namespace GamePrototype
 
         static void Main(string[] args)
         {
-            var gameManager = new Players();
+            var gameManager = new GameManager();
 
-            Console.WriteLine("Hello and welcome to (Game name here)");
-            Console.WriteLine("Created by (Company name here)");
-            Console.WriteLine();
+            Console.WriteLine("Hello and welcome to (Game name here)\n Created by (Company name here)\n");
 
             while (true)
             {
