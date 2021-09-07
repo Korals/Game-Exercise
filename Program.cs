@@ -25,11 +25,7 @@ namespace GamePrototype
             var gameManager = new GameManager();
 
             Console.WriteLine("Hello and welcome to (Game name here)\n Created by (Company name here)\n");
-
-            while (true)
-            {
-                gameManager.Start();
-            }
+            gameManager.Start();
 
         }
     }

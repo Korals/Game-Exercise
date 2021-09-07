@@ -29,6 +29,7 @@ namespace GamePrototype
         {
             Console.WriteLine($"Greetings, my name is {UserName} and I am a sworn fighter of {ClanName}!");
         }
+
         public void DataDump()
         {
             Console.WriteLine($"{nameof(UserName)}: {UserName} | {nameof(ClanName)}: {ClanName}\n" +
@@ -37,7 +38,7 @@ namespace GamePrototype
                 $"{nameof(HealthLevel)}-{HealthLevel}\n" +
                 $"{nameof(DefenceLevel)}-{DefenceLevel}\n" +
                 $"{nameof(AttackLevel)}-{AttackLevel}\n" +
-                $"{nameof(CookingLevel)}-{CookingLevel}.");
+                $"{nameof(CookingLevel)}-{CookingLevel}.\n");
         }
 
         public void SetCookingTo(double change)
@@ -69,7 +70,7 @@ namespace GamePrototype
 
         public void IncreaseLevelsBy(int increase)
         {
-            var maxCombat = 121;
+            var maxCombat = 120;
 
             if (HealthLevel < maxCombat)
             {

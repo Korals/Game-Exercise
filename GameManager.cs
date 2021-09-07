@@ -9,11 +9,6 @@ namespace GamePrototype
     public class GameManager
     {
         private List<Player> _players { get; } = new();
-        public void AllPlayers()
-        {
-            var player = new Player();
-            _players.Add(player);
-        }
 
         public void PlayerGreeting()
         {
@@ -77,13 +72,7 @@ namespace GamePrototype
             switch (menu)
             {
                 case 1:
-                    Console.WriteLine("Enter player name");
-                    var userName = Console.ReadLine();
-                    Console.WriteLine("Enter clan name");
-                    var clanName = Console.ReadLine();
-                    var player = new Player();
-                    player.StatSet(userName, clanName);
-                    AllPlayers();
+                    CaseOne();
                     break;
                 case 2:
                     IncreaseHealthDefenceAndAttackBy();
@@ -107,6 +96,17 @@ namespace GamePrototype
 
             if (playerWantsToQuit) return;
             else Start();
+        }
+
+        private void CaseOne()
+        {
+            Console.WriteLine("Enter player name");
+            var userName = Console.ReadLine();
+            Console.WriteLine("Enter clan name");
+            var clanName = Console.ReadLine();
+            var player = new Player();
+            player.StatSet(userName, clanName);
+            _players.Add(player);
         }
     }
 }
